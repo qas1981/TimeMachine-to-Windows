@@ -1,0 +1,7 @@
+Makes assumptions that you have NFS setup.
+Assumes your largest NFS is where you want your backup.
+
+Steps.
+1. Setup NFS share on Mac
+2. Run script
+3. Set up TimeMachine  to use NFS

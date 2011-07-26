@@ -1,7 +1,8 @@
 #!/bin/bash
 #title: This is a bash script to set up apple time machine syncing to a Windows NFS
-#author: Qasim Shahid qasim@qasimshahid.com
-#comments:I created this in order to assist those who aren't technically saavy to do all this stuff.
+#author: Qasim Shahid qasim[@]qasimshahid.com
+#comments:I created this in order to assist those who aren't technically saavy to do all this stuff. 
+
 
 #set apple time machine to show unsupported volumes in time machine
 defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
@@ -19,4 +20,4 @@ SEPERATOR=_
 hdiutil create -size 500g -fs HFS+J -volname "TimeMachine "$HOST_NAME -verbose $HOST_NAME$SEPERATOR$MAC_ADDY$SPARSE_BUNDLE
 #copy sparse image to network share
 cp -R $HOST_NAME$SEPERATOR$MAC_ADDY$SPARSE_BUNDLE $NFS_SHARE_MOUNT/$HOST_NAME$SEPERATOR$MAC_ADDY$SPARSE_BUNDLE
-echo "Image created @ "$NFS_SHARE_MOUNT/$HOST_NAME$SEPERATOR$MAC_ADDY$SPARSE_BUNDLE
+echo "Image created @ "$NFS_SHARE_MOUNT/$HOST_NAME$SEPERATOR$MAC_ADDY$SPARSE_BUNDLE 
